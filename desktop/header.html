@@ -1,9 +1,6 @@
 <script type="text/discourse-plugin" version="0.8.18">
-    if (api.getCurrentUser() === null) return false; api.modifyClass("component:navigation-bar", { setupComponent(args, component) { component.set('userName', api.getCurrentUser().name); component.set('user', api.getCurrentUser().username); } });
-
+    if(api.getCurrentUser() != null) { $("#logged-in-user").text(" " + api.getCurrentUser().username); }
 </script>
-
-
 <script type="text/x-handlebars" data-template-name="components/navigation-bar">
     <div class="header-content">
         <div class="nav-content">
@@ -21,7 +18,7 @@
             </span>
 
             <span class="browse-text-header">
-                <a  href='/c/discussion/7'>{{userName}}</a>
+                <a  id="logged-in-user"></a>
                 </span>
             </span>
         </div>
