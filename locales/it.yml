@@ -1,6 +1,7 @@
 it: 
   sidebar: 
     community: "hello"
-    discussion: "discussion"
-    announcement: "announcement"
     categories: "categories"
+    announcement: "announcement"
+    discussion: "discussion"
+    
